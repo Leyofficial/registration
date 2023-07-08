@@ -51,7 +51,7 @@ submit.addEventListener("click", (event) => {
     } 
   
   } 
-  else if (loginUser.value == passwordUser.value){
+  else if (loginUser === passwordUser){
     errorMessage('Логин и пароль не должны быть одинаковы!')
     span.before(createElem);
     submit.setAttribute("disabled", true);
