@@ -45,10 +45,17 @@ submit.addEventListener("click", (event) => {
     span.before(createElem);
     if (submit.hasAttribute("disabled")) {
       console.log("yes");
-    } else {
+    }  else {
       submit.setAttribute("disabled", true);
       submit.value = 'Wait!'
-    }
+    } 
+  
+  } 
+  else if (loginUser.value == passwordUser.value){
+    errorMessage('Логин и пароль не должны быть одинаковы!')
+    span.before(createElem);
+    submit.setAttribute("disabled", true);
+      submit.value = 'Wait!'
   } else {
         alert(`Логин :${user.login},Пароль:${user.password}`)
         document.getElementById('password').value = "";
